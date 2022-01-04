@@ -1,0 +1,25 @@
+.wknd-logo {
+  height: 35px;
+  width: 96px;
+}
+.header-navbar {
+  padding: 50px !important;
+  margin: 0 auto;
+}
+a.active,
+a:hover {
+  background-color: #ffea00;
+}
+a {
+  font-weight: 600;
+}
+li {
+  font-size: 14px;
+}
+.search-icon {
+  background-color: #fff !important;
+  border-right: 0px;
+}
+.search-input {
+  border-left: 0;
+}
