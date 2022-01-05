@@ -12,10 +12,13 @@ import HomePage from "./home/HomePage";
 import Adventures from "./adventures/Adventures";
 import Faqs from "./faqs/Faqs";
 import Aboutus from "./aboutus/Aboutus";
+import Magazine from "./magazine/Magazine";
+import Footer from "./footer/Footer";
 
 const RouteUrls = () => {
   let routes = useRoutes([
     { path: "/", element: <HomePage /> },
+    { path: "/Magazine", element: <Magazine /> },
     { path: "/adventures", element: <Adventures /> },
     { path: "/faqs", element: <Faqs /> },
     { path: "/aboutus", element: <Aboutus /> },
@@ -29,6 +32,9 @@ function App() {
       <Router>
         <Header />
         <RouteUrls />
+        <br />
+        <br />
+        <Footer />
       </Router>
     </div>
   );

@@ -4,17 +4,17 @@ import "./Header.css";
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
-  const activeStyle = { backgroundColor: "#FFEA00" };
   return (
-    <div>
+    <div class="container-sm">
       <nav className="navbar navbar-expand-lg sticky-top navbar-light header-navbar">
         <div className="container-fluid">
-          <img
-            src="https://wknd.site/content/experience-fragments/wknd/language-masters/en/site/header/master/_jcr_content/root/container/container_1195249223/image.coreimg.svg/1594412560447/wknd-logo-dk.svg"
-            alt="wknd-logo"
-            className="wknd-logo"
-          />
-
+          <NavLink className="nav-link text-uppercase" to="/" exact>
+            <img
+              src="https://wknd.site/content/experience-fragments/wknd/language-masters/en/site/header/master/_jcr_content/root/container/container_1195249223/image.coreimg.svg/1594412560447/wknd-logo-dk.svg"
+              alt="wknd-logo"
+              className="wknd-logo"
+            />
+          </NavLink>
           <button
             className="navbar-toggler"
             type="button"
@@ -33,9 +33,8 @@ const Header = () => {
             <ul className="navbar-nav ms-auto mb-2 mb-lg-1">
               <li className="nav-item">
                 <NavLink
-                  className="nav-link text-uppercase"
-                  to="/"
-                  activeClassName={Header.active}
+                  className="nav-link text-uppercase nav-item"
+                  to="/Magazine"
                   exact
                 >
                   Magazine
@@ -43,9 +42,8 @@ const Header = () => {
               </li>
               <li className="nav-item">
                 <NavLink
-                  className="nav-link text-uppercase"
+                  className="nav-link text-uppercase nav-item"
                   to="/adventures"
-                  activeStyle={activeStyle}
                   exact
                 >
                   Adventures
@@ -53,9 +51,8 @@ const Header = () => {
               </li>
               <li className="nav-item">
                 <NavLink
-                  className="nav-link text-uppercase"
+                  className="nav-link text-uppercase nav-item"
                   to="/faqs"
-                  activeStyle={activeStyle}
                   exact
                 >
                   FAQS
@@ -63,9 +60,8 @@ const Header = () => {
               </li>
               <li className="nav-item">
                 <NavLink
-                  className="nav-link text-uppercase"
+                  className="nav-link text-uppercase nav-item"
                   to="/aboutus"
-                  activeStyle={activeStyle}
                   exact
                 >
                   About Us

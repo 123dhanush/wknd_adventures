@@ -3,11 +3,11 @@
   width: 96px;
 }
 .header-navbar {
-  padding: 50px !important;
+  padding: 50px 0 !important;
   margin: 0 auto;
 }
-a.active,
-a:hover {
+.nav-item.active,
+.nav-item:hover {
   background-color: #ffea00;
 }
 a {

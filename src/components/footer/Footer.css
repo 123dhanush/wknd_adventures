@@ -1,0 +1,22 @@
+.wknd-logo {
+  height: 35px;
+  width: 96px;
+}
+.header-navbar {
+  padding: 50px 0 !important;
+  margin: 0 auto;
+}
+a {
+  font-weight: 600;
+}
+li {
+  font-size: 14px;
+}
+.footer {
+  background-color: black !important;
+  color: white !important;
+  max-width: 1680px;
+}
+.follow-us {
+  padding: 8px;
+}

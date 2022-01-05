@@ -1,0 +1,17 @@
+.carousel-image {
+  height: 640px !important;
+  width: 1680px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.view-trips-button {
+  background-color: #ffea00 !important;
+  text-transform: uppercase;
+  color: black;
+}
+
+.carousel-caption {
+  background-color: white !important;
+  color: black !important;
+}

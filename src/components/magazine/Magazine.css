@@ -1,0 +1,26 @@
+.featured-image {
+  width: 645px;
+  height: 470px;
+}
+.flex-container {
+  display: flex;
+}
+.flex-item {
+  float: left;
+  flex: 1 !important;
+}
+.featured-article {
+  background-color: rgb(235, 235, 235);
+  padding: 63px 36px 36px 36px;
+}
+.full-article-button {
+  background-color: #ffea00 !important;
+  text-transform: uppercase;
+  color: black;
+}
+.container-sm {
+  max-width: 1140px !important;
+}
+.featured-article-description {
+  font-size: 14px !important;
+}
