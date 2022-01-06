@@ -19,7 +19,7 @@ const RouteUrls = () => {
   let routes = useRoutes([
     { path: "/", element: <HomePage /> },
     { path: "/Magazine", element: <Magazine recentArticles={false} /> },
-    { path: "/adventures", element: <Adventures /> },
+    { path: "/adventures", element: <Adventures nextadventures={false} /> },
     { path: "/faqs", element: <Faqs /> },
     { path: "/aboutus", element: <Aboutus /> },
   ]);

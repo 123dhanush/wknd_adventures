@@ -18,7 +18,11 @@ const getRecentArticles = (articles) => {
         rows.push(
           <div className="col">
             <Card style={{ width: "16rem" }} className="h-100" border="light">
-              <Card.Img variant="top" src={article.imageUrl} />
+              <Card.Img
+                variant="top"
+                className="image-size"
+                src={article.imageUrl}
+              />
               <Card.Body>
                 <Card.Title className="text-uppercase fw-bold">
                   {article.title}
@@ -44,7 +48,11 @@ const getAllArticles = (articles) => {
       rows.push(
         <div className="col">
           <Card style={{ width: "16rem" }} className="h-100" border="light">
-            <Card.Img variant="top" src={article.imageUrl} />
+            <Card.Img
+              variant="top"
+              className="image-size"
+              src={article.imageUrl}
+            />
             <Card.Body>
               <Card.Title className="text-uppercase fw-bold">
                 {article.title}

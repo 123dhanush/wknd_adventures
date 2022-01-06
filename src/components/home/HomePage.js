@@ -2,6 +2,7 @@ import React from "react";
 import "./Homepage.css";
 import Carousel from "react-bootstrap/Carousel";
 import Magazine from "../magazine/Magazine";
+import Adventures from "../adventures/Adventures";
 
 const HomePage = () => {
   const recentArticles = true;
@@ -62,6 +63,8 @@ const HomePage = () => {
       <br />
       <br />
       <Magazine recentArticles={recentArticles} />
+
+      <Adventures nextadventures={true} />
     </div>
   );
 };

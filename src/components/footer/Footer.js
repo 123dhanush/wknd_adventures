@@ -115,9 +115,7 @@ const Footer = () => {
           </div>
         </div>
       </nav>
-      <p className="container-sm ps-4 pb-5">
-        Copyright @2021 G V Dhanush Kumar
-      </p>
+      <p className="container-sm ps-4 pb-5">Copyright @2021 WKND Site</p>
     </div>
   );
 };

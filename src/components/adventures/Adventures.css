@@ -18,3 +18,15 @@
   background-color: white !important;
   color: black !important;
 }
+
+.hr-line {
+  width: 10%;
+  height: 2px !important;
+  border-bottom: 2px solid #ffea00;
+}
+
+.image-size {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
