@@ -66,10 +66,10 @@ const Footer = () => {
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <ul className="navbar-nav ms-auto mb-2 mb-lg-1">
               <li className="text-uppercase nav-link">
-                <p class="follow-us mb-0">Follow us</p>
+                <p className="follow-us mb-0">Follow us</p>
               </li>
 
-              <li class="nav-link">
+              <li className="nav-link">
                 <button className="btn btn-icon btn-dark">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +83,7 @@ const Footer = () => {
                   </svg>
                 </button>
               </li>
-              <li class="nav-link">
+              <li className="nav-link">
                 <button className="btn btn-icon btn-dark">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -97,7 +97,7 @@ const Footer = () => {
                   </svg>
                 </button>
               </li>
-              <li class="nav-link">
+              <li className="nav-link">
                 <button className="btn btn-icon btn-dark">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -115,7 +115,9 @@ const Footer = () => {
           </div>
         </div>
       </nav>
-      <p class="container-sm ps-4 pb-5">Copyright @2021 G V Dhanush Kumar</p>
+      <p className="container-sm ps-4 pb-5">
+        Copyright @2021 G V Dhanush Kumar
+      </p>
     </div>
   );
 };

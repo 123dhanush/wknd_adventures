@@ -18,7 +18,7 @@ import Footer from "./footer/Footer";
 const RouteUrls = () => {
   let routes = useRoutes([
     { path: "/", element: <HomePage /> },
-    { path: "/Magazine", element: <Magazine /> },
+    { path: "/Magazine", element: <Magazine recentArticles={false} /> },
     { path: "/adventures", element: <Adventures /> },
     { path: "/faqs", element: <Faqs /> },
     { path: "/aboutus", element: <Aboutus /> },
@@ -28,7 +28,7 @@ const RouteUrls = () => {
 
 function App() {
   return (
-    <div className="container-fluid">
+    <div>
       <Router>
         <Header />
         <RouteUrls />

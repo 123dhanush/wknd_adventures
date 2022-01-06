@@ -17,10 +17,23 @@
   background-color: #ffea00 !important;
   text-transform: uppercase;
   color: black;
+  font-size: 14px !important;
+  font-weight: 600 !important;
 }
 .container-sm {
   max-width: 1140px !important;
 }
 .featured-article-description {
   font-size: 14px !important;
+}
+.hr-line {
+  width: 10%;
+  height: 2px !important;
+  border-bottom: 2px solid #ffea00;
+}
+.ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: inherit;
+  white-space: nowrap;
 }

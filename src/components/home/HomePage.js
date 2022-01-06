@@ -4,8 +4,9 @@ import Carousel from "react-bootstrap/Carousel";
 import Magazine from "../magazine/Magazine";
 
 const HomePage = () => {
+  const recentArticles = true;
   return (
-    <div class="container-fluid">
+    <div className="container-fluid">
       <Carousel fade indicators="false">
         <Carousel.Item>
           <img
@@ -60,7 +61,7 @@ const HomePage = () => {
       <br />
       <br />
       <br />
-      <Magazine />
+      <Magazine recentArticles={recentArticles} />
     </div>
   );
 };

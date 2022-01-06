@@ -23,3 +23,12 @@ li {
 .search-input {
   border-left: 0;
 }
+.scroll-nav {
+  background-color: #fff;
+  box-shadow: 0 8px 20px 0 rgb(0 0 0 / 26%);
+}
+
+.scroll-padding {
+  padding-top: 25px !important;
+  padding-bottom: 15px !important;
+}
