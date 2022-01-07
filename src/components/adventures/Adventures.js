@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Carousel } from "react-bootstrap";
+import { Carousel, Nav } from "react-bootstrap";
 import adventures from "../../data/adventures.json";
 import Card from "react-bootstrap/Card";
 import "./Adventures.css";
@@ -10,7 +10,7 @@ const getNextAdventures = (adventures) => {
     adventures.map((adventure, index) => {
       if (index < 4) {
         rows.push(
-          <div className="col">
+          <div className="me-2 mb-2" key={adventure.id}>
             <Card style={{ width: "16rem" }} className="h-100" border="light">
               <Card.Img
                 variant="top"
@@ -38,9 +38,9 @@ const getAllAdventures = (adventures) => {
   var rows = [];
   console.log("inside get recent adventures:", adventures);
   if (adventures) {
-    adventures.map((adventure, index) => {
+    adventures.map((adventure) => {
       rows.push(
-        <div className="col">
+        <div className="me-2 mb-2" key={adventure.id}>
           <Card style={{ width: "16rem" }} className="h-100" border="light">
             <Card.Img
               variant="top"
@@ -65,11 +65,20 @@ const getAllAdventures = (adventures) => {
 
 const Adventures = ({ nextadventures }) => {
   const [allAdventures, setAllAdventures] = useState([]);
+  let type = "all";
+  const handleSelect = (eventKey) => {
+    type = eventKey;
+    type !== "all"
+      ? setAllAdventures(
+          adventures.filter((adventure) => adventure.type === type)
+        )
+      : setAllAdventures(adventures);
+    console.log("In handle Select");
+  };
   useEffect(() => {
     console.log("Inside effect:", adventures);
     setAllAdventures(adventures);
   }, []);
-
   return (
     <div>
       {nextadventures && (
@@ -109,7 +118,9 @@ const Adventures = ({ nextadventures }) => {
           <div className="container-sm">
             <h2>Where do you want to go?</h2>
             <br />
-            <div className="card-group">{getNextAdventures(allAdventures)}</div>
+            <div className="card-group">
+              {getNextAdventures(allAdventures, setAllAdventures)}
+            </div>
             <br />
             <button className="btn btn-lg view-trips-button">All trips</button>
           </div>
@@ -122,10 +133,70 @@ const Adventures = ({ nextadventures }) => {
       )}
       {nextadventures === false && (
         <div>
+          <div className="container-fluid">
+            <Carousel fade indicators="false">
+              <Carousel.Item>
+                <img
+                  className="d-block carousel-image"
+                  src="https://wknd.site/us/en/_jcr_content/root/container/carousel/item_1571954853062.coreimg.60.1600.jpeg/1636662642365/adobestock-216674449.jpeg"
+                  alt="First slide"
+                />
+                <Carousel.Caption className="carousel-caption">
+                  <h3>Experience the world with us</h3>
+                  <p>
+                    With WKND Adventures, you don't just see the world -- you
+                    experience its cultures, flavors and wonders.
+                  </p>
+                </Carousel.Caption>
+              </Carousel.Item>
+            </Carousel>
+            <br />
+            <br />
+          </div>
           <div className="container-sm">
             <h2>Current Adventures</h2>
             <hr className="hr-line" />
-            <div className="card-group">{getAllAdventures(allAdventures)}</div>
+            <Nav variant="pills" defaultActiveKey="all" onSelect={handleSelect}>
+              <Nav.Item className="text-uppercase adventure-nav-item">
+                <Nav.Link eventKey="all" className="adventure-nav-link">
+                  All
+                </Nav.Link>
+              </Nav.Item>
+
+              <Nav.Item className="text-uppercase adventure-nav-item">
+                <Nav.Link eventKey="cycling" className="adventure-nav-link">
+                  Cycling
+                </Nav.Link>
+              </Nav.Item>
+
+              <Nav.Item className="text-uppercase adventure-nav-item">
+                <Nav.Link eventKey="climbing" className="adventure-nav-link">
+                  Climbing
+                </Nav.Link>
+              </Nav.Item>
+
+              <Nav.Item className="text-uppercase adventure-nav-item">
+                <Nav.Link eventKey="skiing" className="adventure-nav-link">
+                  Skiing
+                </Nav.Link>
+              </Nav.Item>
+
+              <Nav.Item className="text-uppercase adventure-nav-item">
+                <Nav.Link eventKey="surfing" className="adventure-nav-link">
+                  Surfing
+                </Nav.Link>
+              </Nav.Item>
+
+              <Nav.Item className="text-uppercase adventure-nav-item">
+                <Nav.Link eventKey="travel" className="adventure-nav-link">
+                  Travel
+                </Nav.Link>
+              </Nav.Item>
+            </Nav>
+            <br />
+            <div className="card-group">
+              {getAllAdventures(allAdventures, type)}
+            </div>
           </div>
           <br />
           <br />

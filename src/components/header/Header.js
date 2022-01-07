@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import "./Header.css";
 import { NavLink } from "react-router-dom";
+import { Dropdown, Form } from "react-bootstrap";
 
 const Header = () => {
   const [scroll, setScroll] = useState(false);
@@ -13,6 +14,21 @@ const Header = () => {
 
   return (
     <div className={scroll ? "sticky-top scroll-nav" : ""}>
+      <div className="container-fluid bg-dark">
+        <nav className="container-sm navbar navbar-expand-sm navbar-dark bg-dark login-nav">
+          <button className="btn-dark text-uppercase ms-auto signin-btn" to="/">
+            sign in
+          </button>
+          &nbsp;&nbsp;&nbsp;
+          <Form.Select size="sm" className="lang-select">
+            <option>EN-US</option>
+            <option>EN-CA</option>
+            <option>DE-CH</option>
+            <option>DE-DE</option>
+          </Form.Select>
+        </nav>
+      </div>
+
       <div className="container-sm">
         <nav
           className={

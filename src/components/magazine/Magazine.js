@@ -16,7 +16,7 @@ const getRecentArticles = (articles) => {
     articles.map((article, index) => {
       if (index < 4) {
         rows.push(
-          <div className="col">
+          <div className="me-2 mb-2" key={article.id}>
             <Card style={{ width: "16rem" }} className="h-100" border="light">
               <Card.Img
                 variant="top"
@@ -46,7 +46,7 @@ const getAllArticles = (articles) => {
   if (articles) {
     articles.map((article, index) => {
       rows.push(
-        <div className="col">
+        <div className="me-2 mb-2" key={article.id}>
           <Card style={{ width: "16rem" }} className="h-100" border="light">
             <Card.Img
               variant="top"
@@ -80,7 +80,7 @@ const Magazine = ({ recentArticles }) => {
     return (
       <div>
         <div className="container-sm flex-container">
-          <div className="col-md-5 flex-item featured-article">
+          <div className="me-2 mb-2-md-5 flex-item featured-article">
             <h5>Featured Article</h5>
             <h2>Camping in Western Australia</h2>
             <p className="featured-article-description">
@@ -94,7 +94,7 @@ const Magazine = ({ recentArticles }) => {
               Full Article
             </button>
           </div>
-          <div className="col-md-7 image-container flex-item">
+          <div className="me-2 mb-2-md-7 image-container flex-item">
             <img
               src="https://wknd.site/us/en/_jcr_content/root/container/container/teaser.coreimg.60.1600.jpeg/1636662642430/adobestock-156407519.jpeg"
               alt="featured-article"

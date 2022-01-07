@@ -32,3 +32,20 @@ li {
   padding-top: 25px !important;
   padding-bottom: 15px !important;
 }
+.login-nav {
+  height: 28px;
+}
+.signin-btn {
+  font-size: 14px;
+  border: 0;
+}
+.lang-select {
+  font-size: 14px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  border: 0 !important;
+  width: 80px;
+
+  background-color: inherit !important;
+  color: white !important;
+}
