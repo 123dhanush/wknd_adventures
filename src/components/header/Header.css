@@ -31,6 +31,7 @@ li {
 .scroll-padding {
   padding-top: 25px !important;
   padding-bottom: 15px !important;
+  transition: padding 0.2 s linear;
 }
 .login-nav {
   height: 28px;
@@ -44,7 +45,7 @@ li {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
   border: 0 !important;
-  width: 80px;
+  width: 80px !important;
 
   background-color: inherit !important;
   color: white !important;

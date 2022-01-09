@@ -15,7 +15,7 @@ const Header = () => {
   return (
     <div className={scroll ? "sticky-top scroll-nav" : ""}>
       <div className="container-fluid bg-dark">
-        <nav className="container-sm navbar navbar-expand-sm navbar-dark bg-dark login-nav">
+        <nav className="container-sm sticky-top navbar navbar-expand-sm navbar-dark bg-dark login-nav">
           <button className="btn-dark text-uppercase ms-auto signin-btn" to="/">
             sign in
           </button>
